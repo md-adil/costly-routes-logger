@@ -33,7 +33,11 @@ export default function routeLogger(conf?: Partial<IRouteLoggerConfig>) {
     systemTracker(config.threshold!, config.frequency).on("load", async (info) => {
         config.logger(info);
         for (const id of await storage.findAll()) {
-            await storage.update(id, { cpu: info.cpu, memory: info.memory });
+            await storage.update(id, {
+                cpu: info.cpu,
+                memory: info.memory,
+                completedAt: (new Date()).toJSON()
+            });
             await storage.move(id, id.replace(config.prefixSafe, config.prefixDanger));
         }
     }).on("error", (err) => {
