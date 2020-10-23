@@ -1,0 +1,29 @@
+{
+  "name": "routelogger",
+  "version": "1.0.0",
+  "main": "build/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/express": "^4.17.8",
+    "@types/mocha": "^8.0.3",
+    "@types/pidusage": "^2.0.1",
+    "@types/redis": "^2.8.28",
+    "@types/uuid": "^8.3.0",
+    "chai": "^4.2.0",
+    "express": "^4.17.1",
+    "mocha": "^8.2.0"
+  },
+  "dependencies": {
+    "node-usage": "^0.0.3",
+    "os-util": "^1.0.2",
+    "pidusage": "^2.0.21",
+    "redis": "^3.0.2",
+    "uuid": "^8.3.1"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "start": "nodemon --watch build ./build",
+    "test": "mocha build/tests/*.spec.js"
+  }
+}
