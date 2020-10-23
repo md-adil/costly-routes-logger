@@ -17,6 +17,6 @@ export default function systemTracker(threashold: number, frequency: number = 30
         } catch(err) {
             events.emit("error", err);
         }
-    }, 300)
+    }, frequency);
     return events;
 }

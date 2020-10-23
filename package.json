@@ -12,7 +12,8 @@
     "@types/uuid": "^8.3.0",
     "chai": "^4.2.0",
     "express": "^4.17.1",
-    "mocha": "^8.2.0"
+    "mocha": "^8.2.0",
+    "prime-number": "^1.0.2"
   },
   "dependencies": {
     "node-usage": "^0.0.3",
